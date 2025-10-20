@@ -1,0 +1,90 @@
+2025-10-07 15:39:06 [INFO] Environment diagnostics:
+2025-10-07 15:39:06 [INFO]   Python executable: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+2025-10-07 15:39:06 [INFO]   Python version: 3.13.3
+2025-10-07 15:39:06 [INFO]   Flask version: 3.1.2
+2025-10-07 15:39:06 [INFO]   OpenAI SDK version: 2.2.0
+2025-10-07 15:39:06 [INFO]   .env path: /Users/fenixwiles/Desktop/ATRP/.env (found)
+2025-10-07 15:39:06 [INFO]   No new variables loaded from .env.
+2025-10-07 15:39:06 [WARNING] OPENAI_API_KEY is not set. Critique requests will fail until it is configured.
+2025-10-07 15:39:06 [INFO] Attempting to initialize OpenAI client...
+2025-10-07 15:39:06 [ERROR] Failed to initialize OpenAI client: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2025-10-07 15:39:06 [INFO] Starting Flask development server on http://localhost:5000 ...
+2025-10-07 15:49:47 [INFO] Flask development server has stopped.
+2025-10-07 15:49:56 [INFO] Environment diagnostics:
+2025-10-07 15:49:56 [INFO]   Python executable: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+2025-10-07 15:49:56 [INFO]   Python version: 3.13.3
+2025-10-07 15:49:56 [INFO]   Flask version: 3.1.2
+2025-10-07 15:49:56 [INFO]   OpenAI SDK version: 2.2.0
+2025-10-07 15:49:56 [INFO]   .env path: /Users/fenixwiles/Desktop/ATRP/.env (found)
+2025-10-07 15:49:56 [INFO]   No new variables loaded from .env.
+2025-10-07 15:49:56 [WARNING] OPENAI_API_KEY is not set. Critique requests will fail until it is configured.
+2025-10-07 15:49:56 [INFO] Attempting to initialize OpenAI client...
+2025-10-07 15:49:56 [ERROR] Failed to initialize OpenAI client: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2025-10-07 15:49:56 [INFO] Starting Flask development server on http://localhost:5000 ...
+2025-10-07 15:57:33 [INFO] Flask development server has stopped.
+2025-10-07 16:05:49 [INFO] Environment diagnostics:
+2025-10-07 16:05:49 [INFO]   Python executable: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+2025-10-07 16:05:49 [INFO]   Python version: 3.13.3
+2025-10-07 16:05:49 [INFO]   Flask version: 3.1.2
+2025-10-07 16:05:49 [INFO]   OpenAI SDK version: 2.2.0
+2025-10-07 16:05:49 [INFO]   .env path: /Users/fenixwiles/Desktop/ATRP/.env (found)
+2025-10-07 16:05:49 [INFO]   Loaded environment variables from .env.
+2025-10-07 16:05:49 [INFO]   Detected OPENAI_API_KEY with length 164.
+2025-10-07 16:05:49 [INFO] Attempting to initialize OpenAI client...
+2025-10-07 16:05:49 [INFO] OpenAI client initialized successfully.
+2025-10-07 16:05:49 [INFO] Starting Flask development server on http://localhost:5000 ...
+2025-10-07 16:25:49 [INFO] Flask development server has stopped.
+2025-10-07 16:26:02 [INFO] Environment diagnostics:
+2025-10-07 16:26:02 [INFO]   Python executable: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+2025-10-07 16:26:02 [INFO]   Python version: 3.13.3
+2025-10-07 16:26:02 [INFO]   Flask version: 3.1.2
+2025-10-07 16:26:02 [INFO]   OpenAI SDK version: 2.2.0
+2025-10-07 16:26:02 [INFO]   Template folder: /Users/fenixwiles/Desktop/ATRP/templates
+2025-10-07 16:26:02 [INFO]   Found index.html template at /Users/fenixwiles/Desktop/ATRP/templates/index.html
+2025-10-07 16:26:02 [INFO]   .env path: /Users/fenixwiles/Desktop/ATRP/.env (found)
+2025-10-07 16:26:02 [INFO]   Loaded environment variables from .env.
+2025-10-07 16:26:02 [INFO]   Detected OPENAI_API_KEY with length 164.
+2025-10-07 16:26:02 [INFO] Attempting to initialize OpenAI client...
+2025-10-07 16:26:02 [INFO] OpenAI client initialized successfully.
+2025-10-07 16:26:02 [INFO] Starting Flask development server on http://localhost:5000 ...
+2025-10-07 16:33:20 [INFO] Flask development server has stopped.
+2025-10-07 16:33:27 [INFO] Environment diagnostics:
+2025-10-07 16:33:27 [INFO]   Python executable: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+2025-10-07 16:33:27 [INFO]   Python version: 3.13.3
+2025-10-07 16:33:27 [INFO]   Flask version: 3.1.2
+2025-10-07 16:33:27 [INFO]   OpenAI SDK version: 2.2.0
+2025-10-07 16:33:27 [INFO]   Template folder: /Users/fenixwiles/Desktop/ATRP/templates
+2025-10-07 16:33:27 [INFO]   Found index.html template at /Users/fenixwiles/Desktop/ATRP/templates/index.html
+2025-10-07 16:33:27 [INFO]   .env path: /Users/fenixwiles/Desktop/ATRP/.env (found)
+2025-10-07 16:33:27 [INFO]   Loaded environment variables from .env.
+2025-10-07 16:33:27 [INFO]   Detected OPENAI_API_KEY with length 164.
+2025-10-07 16:33:27 [INFO] Attempting to initialize OpenAI client...
+2025-10-07 16:33:27 [INFO] OpenAI client initialized successfully.
+2025-10-07 16:33:27 [INFO] Starting Flask development server on http://localhost:5000 ...
+2025-10-13 13:56:45 [INFO] Environment diagnostics:
+2025-10-13 13:56:45 [INFO]   Python executable: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+2025-10-13 13:56:45 [INFO]   Python version: 3.13.3
+2025-10-13 13:56:45 [INFO]   Flask version: 3.1.2
+2025-10-13 13:56:45 [INFO]   OpenAI SDK version: 2.2.0
+2025-10-13 13:56:45 [INFO]   Template folder: /Users/fenixwiles/Desktop/ATRP/templates
+2025-10-13 13:56:45 [INFO]   Found index.html template at /Users/fenixwiles/Desktop/ATRP/templates/index.html
+2025-10-13 13:56:45 [INFO]   .env path: /Users/fenixwiles/Desktop/ATRP/.env (found)
+2025-10-13 13:56:45 [INFO]   Loaded environment variables from .env.
+2025-10-13 13:56:45 [INFO]   Detected OPENAI_API_KEY with length 164.
+2025-10-13 13:56:45 [INFO] Attempting to initialize OpenAI client...
+2025-10-13 13:56:45 [INFO] OpenAI client initialized successfully.
+2025-10-13 13:56:45 [INFO] Starting Flask development server on http://localhost:5000 ...
+2025-10-13 17:18:14 [INFO] Flask development server has stopped.
+2025-10-13 17:18:17 [INFO] Environment diagnostics:
+2025-10-13 17:18:17 [INFO]   Python executable: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+2025-10-13 17:18:17 [INFO]   Python version: 3.13.3
+2025-10-13 17:18:17 [INFO]   Flask version: 3.1.2
+2025-10-13 17:18:17 [INFO]   OpenAI SDK version: 2.2.0
+2025-10-13 17:18:17 [INFO]   Template folder: /Users/fenixwiles/Desktop/ATRP/templates
+2025-10-13 17:18:17 [INFO]   Found index.html template at /Users/fenixwiles/Desktop/ATRP/templates/index.html
+2025-10-13 17:18:17 [INFO]   .env path: /Users/fenixwiles/Desktop/ATRP/.env (found)
+2025-10-13 17:18:17 [INFO]   Loaded environment variables from .env.
+2025-10-13 17:18:17 [INFO]   Detected OPENAI_API_KEY with length 164.
+2025-10-13 17:18:17 [INFO] Attempting to initialize OpenAI client...
+2025-10-13 17:18:17 [INFO] OpenAI client initialized successfully.
+2025-10-13 17:18:17 [INFO] Starting Flask development server on http://localhost:5000 ...

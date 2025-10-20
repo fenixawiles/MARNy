@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warp Recursive Review</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff 0%, #f9fafb 100%);
+            color: #1f2933;
+        }
+        .page {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 52px 20px 64px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 34px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.1rem;
+            letter-spacing: 0.4px;
+            color: #1f2933;
+        }
+        header p {
+            margin: 10px 0 0;
+            color: #52606d;
+            font-size: 1.02rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 18px 42px -24px rgba(15, 23, 42, 0.45);
+            border: 1px solid rgba(118, 131, 154, 0.18);
+        }
+        form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #273469;
+        }
+        textarea {
+            width: 100%;
+            min-height: 220px;
+            padding: 16px;
+            border: 1px solid #c7d2fe;
+            border-radius: 12px;
+            background: #f8faff;
+            font-size: 1rem;
+            line-height: 1.55;
+            color: #1f2933;
+            resize: vertical;
+        }
+        textarea:focus {
+            outline: 3px solid rgba(87, 108, 222, 0.35);
+            background: #ffffff;
+        }
+        .actions {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        button[type="submit"] {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #4a6cf7, #4255ff);
+            color: #ffffff;
+            font-size: 1.02rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s;
+        }
+        button[type="submit"]:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 22px -12px rgba(66, 85, 255, 0.7);
+        }
+        button[type="submit"]:disabled {
+            background: #a2a8d3;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+            opacity: 0.85;
+        }
+        .helper-text {
+            color: #697386;
+            font-size: 0.92rem;
+        }
+        .status-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            margin-top: 22px;
+            border-radius: 999px;
+            background: #e0e7ff;
+            color: #273469;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .alert {
+            margin-top: 22px;
+            border-radius: 12px;
+            padding: 16px 18px;
+            font-size: 0.96rem;
+            line-height: 1.55;
+        }
+        .alert-error {
+            background: #fff1f2;
+            border: 1px solid #fbb6ce;
+            color: #ab1f3f;
+        }
+        .alert-warning {
+            background: #fff7ed;
+            border: 1px solid #fdba74;
+            color: #9a3412;
+        }
+        .alert-info {
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            color: #3730a3;
+        }
+        .alert-success {
+            background: #ecfdf5;
+            border: 1px solid #6ee7b7;
+            color: #047857;
+        }
+        .results {
+            margin-top: 36px;
+        }
+        .results h2 {
+            margin: 0 0 16px;
+            font-size: 1.4rem;
+            color: #1f2933;
+        }
+        .critique-box {
+            background: #f4f7ff;
+            border: 1px solid rgba(118, 131, 154, 0.18);
+            border-radius: 12px;
+            padding: 18px 20px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        .loop-history {
+            margin-top: 28px;
+        }
+        .loop-history h3 {
+            margin: 0 0 12px;
+            font-size: 1.15rem;
+            color: #273469;
+        }
+        .history-item {
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            padding: 22px;
+            box-shadow: 0 12px 28px -22px rgba(15, 23, 42, 0.5);
+        }
+        .history-item + .history-item {
+            margin-top: 20px;
+        }
+        .history-item header {
+            margin: 0 0 14px;
+        }
+        .history-item header span {
+            display: block;
+            color: #697386;
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+        .history-item-section {
+            margin-top: 14px;
+        }
+        .history-item-section strong {
+            display: block;
+            font-size: 0.92rem;
+            color: #1f2933;
+            margin-bottom: 6px;
+        }
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 0.88rem;
+            color: #9aa5b1;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <h1>Warp Recursive Review</h1>
+        <p>Paste your document once. The system will critique and revise until no substantive issues remain.</p>
+    </header>
+    <div class="card">
+        {% if startup_messages %}
+            <div class="alert alert-warning">
+                <strong>Startup diagnostics reported issues:</strong>
+                <ul style="margin: 12px 0 0 18px; padding: 0;">
+                    {% for entry in startup_messages %}
+                        <li>{{ entry.message }}</li>
+                    {% endfor %}
+                </ul>
+                {% if client_error %}
+                    <div style="margin-top: 10px;"><em>Latest OpenAI error:</em> {{ client_error }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {% if error_message %}
+            <div class="alert alert-error">{{ error_message }}</div>
+        {% endif %}
+
+        <form action="/critique" method="post">
+            <label for="document_text">Document for Recursive Review</label>
+            <textarea id="document_text"
+                      name="document_text"
+                      placeholder="Paste the document you want reviewed. The system will handle subsequent revisions."
+>{{ document_text }}</textarea>
+            <p class="helper-text">The reviewer will iterate autonomously, saving critiques and revisions to your audit trail.</p>
+            <div class="actions">
+                <button type="submit">Start Review</button>
+                <span class="helper-text">Refining document... (will stop when substantively sound)</span>
+            </div>
+        </form>
+
+        {% if loops %}
+            <section class="results">
+                <h2>Refinement Results</h2>
+                {% if refinement_complete and stop_reason %}
+                    <div class="alert alert-success">{{ stop_reason }}</div>
+                {% elif stop_reason %}
+                    <div class="alert alert-info">{{ stop_reason }}</div>
+                {% endif %}
+
+                <div class="history-item" style="margin-bottom: 26px;">
+                    <header>
+                        <h3>Latest Document</h3>
+                        {% if log_file %}
+                            <span>Audit trail saved to <code>audit_trails/{{ log_file }}</code></span>
+                        {% endif %}
+                    </header>
+                    <div class="critique-box">{{ final_document }}</div>
+                </div>
+
+                <section class="loop-history">
+                    <h3>Loop Details</h3>
+                    <p class="helper-text">Each loop records the critique, the resulting revision, and why the system chose to continue or stop.</p>
+                    {% for iteration in loops %}
+                        <article class="history-item">
+                            <header>
+                                <strong>Loop {{ iteration.iteration }}</strong>
+                                <span>Autonomous refinement cycle</span>
+                            </header>
+                            <div class="history-item-section">
+                                <strong>Input Document</strong>
+                                <div class="critique-box">{{ iteration.document }}</div>
+                            </div>
+                            <div class="history-item-section">
+                                <strong>Critique</strong>
+                                <div class="critique-box">{{ iteration.critique }}</div>
+                            </div>
+                            <div class="history-item-section">
+                                <strong>Revision</strong>
+                                <div class="critique-box">{{ iteration.revision }}</div>
+                            </div>
+                            <div class="history-item-section">
+                                <strong>Stopping Evaluation</strong>
+                                <div class="critique-box">{{ iteration.evaluation }}</div>
+                            </div>
+                        </article>
+                    {% endfor %}
+                </section>
+            </section>
+        {% endif %}
+    </div>
+    <footer>
+        Warp MVP • Recursive critiques generated by GPT-4o-mini
+    </footer>
+</div>
+</body>
+</html>
